@@ -14,18 +14,6 @@ local cinematic = {
 					if (!IsValid(me)) then
 						return end
 
-					local wep = me:CreateFakeModel("weapon", "models/weapons/c_models/c_headtaker/c_headtaker.mdl")
-					local atch = me:GetAttachment(5)
-					if (atch) then
-						local ang = atch.Ang
-						ang:RotateAroundAxis(ang:Up(), 90)
-
-						wep:SetRenderOrigin(atch.Pos)
-						wep:SetRenderAngles(ang)
-						wep:SetModelScale(2, 0)
-						wep:DrawModel()
-					end
-
 					me:FrameAdvance()
 					me:DrawModel()
 
